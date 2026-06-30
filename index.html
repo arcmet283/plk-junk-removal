@@ -53,11 +53,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--black);bord
 .mobile-menu.active{transform:translateY(0);}
 
 /* ── HERO ── */
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#0d1a0f 0%,#111827 55%,#1a2e0d 100%);}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 30%,rgba(232,106,0,.14) 0%,transparent 70%);}
-.hero-content{position:relative;z-index:2;max-width:700px;padding:150px 48px 0;text-align:center;}
-.hero-logo-banner{position:relative;z-index:2;max-width:620px;width:100%;margin:44px auto 0;padding:0 48px 90px;}
-.hero-logo-banner img{width:100%;height:auto;border-radius:12px;box-shadow:0 24px 70px rgba(0,0,0,.5);border:2px solid rgba(245,197,24,.35);}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background-image:url('plj-hero-bg.svg');background-size:cover;background-position:center bottom;background-repeat:no-repeat;}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.88) 0%,rgba(10,10,10,.72) 55%,rgba(10,10,10,.55) 100%);}
+.hero-content{position:relative;z-index:2;max-width:700px;padding:150px 48px 100px;text-align:center;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:4px;margin-bottom:28px;font-weight:500;}
 .hero-badge::before{content:'';width:7px;height:7px;background:#fff;border-radius:50%;animation:blink 1.8s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
@@ -219,7 +217,7 @@ footer{background:var(--black);padding:64px 48px 32px;}
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="PLJ Junk Removal home">
-      <img src="plj-logo.jpg" alt="PLJ Junk Removal & Delivery/Pickup" class="nav-logo-img">
+      <img src="plj-icon.svg" alt="PLJ Junk Removal & Delivery/Pickup" class="nav-logo-img">
     </a>
     <div class="nav-right">
       <a href="tel:+18032263830" class="nav-phone">📞 803-226-3830</a>
@@ -257,9 +255,6 @@ footer{background:var(--black);padding:64px 48px 32px;}
       <div class="trust-pill">5-Star Rated</div>
       <div class="trust-pill">Locally Owned</div>
     </div>
-  </div>
-  <div class="hero-logo-banner">
-    <img src="plj-logo.jpg" alt="PLJ Junk Removal — Pickup, Loading, Junk">
   </div>
 </section>
 
@@ -506,7 +501,7 @@ footer{background:var(--black);padding:64px 48px 32px;}
       <div>
         <div class="footer-logo">
           <a href="/" class="nav-logo" aria-label="PLJ Junk Removal home">
-            <img src="plj-logo.jpg" alt="PLJ Junk Removal & Delivery/Pickup" class="nav-logo-img">
+            <img src="plj-icon.svg" alt="PLJ Junk Removal & Delivery/Pickup" class="nav-logo-img">
           </a>
         </div>
         <p class="footer-tagline">Fast, affordable junk removal for homes, businesses, and rural properties. Licensed, insured, and locally owned. City or country — we come to you.</p>
