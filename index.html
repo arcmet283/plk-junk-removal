@@ -35,6 +35,7 @@ img{display:block;max-width:100%;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--black);border-bottom:3px solid var(--orange);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:72px;}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-img{height:48px;width:auto;border-radius:5px;}
 .nav-logo-mark{background:var(--orange);color:#fff;font-weight:800;font-size:17px;padding:6px 12px;border-radius:6px;letter-spacing:-.01em;}
 .nav-logo-name{font-size:16px;font-weight:700;color:var(--white);letter-spacing:-.01em;line-height:1.2;}
 .nav-logo-name span{color:var(--yellow);display:block;font-size:11px;font-family:var(--mono);letter-spacing:.06em;font-weight:400;}
@@ -52,23 +53,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--black);bord
 .mobile-menu.active{transform:translateY(0);}
 
 /* ── HERO ── */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.75) 55%,rgba(10,10,10,.4) 100%);}
-.hero-content{position:relative;z-index:2;max-width:700px;padding:160px 48px 100px;}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#0d1a0f 0%,#111827 55%,#1a2e0d 100%);}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 30%,rgba(232,106,0,.14) 0%,transparent 70%);}
+.hero-content{position:relative;z-index:2;max-width:700px;padding:150px 48px 0;text-align:center;}
+.hero-logo-banner{position:relative;z-index:2;max-width:620px;width:100%;margin:44px auto 0;padding:0 48px 90px;}
+.hero-logo-banner img{width:100%;height:auto;border-radius:12px;box-shadow:0 24px 70px rgba(0,0,0,.5);border:2px solid rgba(245,197,24,.35);}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:4px;margin-bottom:28px;font-weight:500;}
 .hero-badge::before{content:'';width:7px;height:7px;background:#fff;border-radius:50%;animation:blink 1.8s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .hero h1{font-size:clamp(40px,5.5vw,72px);font-weight:800;color:var(--white);line-height:1.04;letter-spacing:-.03em;margin-bottom:22px;}
 .hero h1 em{color:var(--yellow);font-style:normal;}
-.hero-sub{font-size:18px;color:rgba(255,255,255,.72);line-height:1.7;max-width:540px;margin-bottom:40px;}
-.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:52px;}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.72);line-height:1.7;max-width:540px;margin:0 auto 40px;}
+.hero-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;margin-bottom:36px;}
 .btn-primary{display:inline-block;background:var(--orange);color:#fff;padding:16px 32px;border-radius:6px;font-weight:700;font-size:16px;text-decoration:none;transition:all .2s;box-shadow:0 4px 28px rgba(232,106,0,.45);}
 .btn-primary:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 8px 36px rgba(232,106,0,.55);}
 .btn-call{display:inline-flex;align-items:center;gap:10px;background:rgba(245,197,24,.12);border:2px solid var(--yellow);color:var(--yellow);padding:14px 28px;border-radius:6px;font-weight:700;font-size:16px;text-decoration:none;transition:all .2s;}
 .btn-call:hover{background:var(--yellow);color:var(--black);}
-.hero-trust{display:flex;gap:28px;flex-wrap:wrap;}
+.hero-trust{display:flex;gap:28px;flex-wrap:wrap;justify-content:center;}
 .trust-pill{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.7);font-size:13px;font-weight:600;}
 .trust-pill::before{content:'✓';background:var(--yellow);color:var(--black);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;}
 
@@ -183,7 +184,9 @@ footer{background:var(--black);padding:64px 48px 32px;}
   .nav-phone{display:none;}
   .nav-cta{display:none;}
   .menu-toggle{display:flex;}
-  .hero-content{padding:120px 24px 80px;}
+  .hero-content{padding:110px 24px 0;}
+  .hero-logo-banner{padding:0 24px 64px;margin-top:32px;}
+  .nav-logo-img{height:38px;}
   .strip{padding:16px 24px;}
   .strip-inner{gap:28px;}
   .section-wrap{padding:72px 24px;}
@@ -216,8 +219,7 @@ footer{background:var(--black);padding:64px 48px 32px;}
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="PLJ Junk Removal home">
-      <div class="nav-logo-mark">PLJ</div>
-      <div class="nav-logo-name">Junk Removal<span>Pickup · Loading · Junk</span></div>
+      <img src="plj-logo.jpg" alt="PLJ Junk Removal & Delivery/Pickup" class="nav-logo-img">
     </a>
     <div class="nav-right">
       <a href="tel:+18032263830" class="nav-phone">📞 803-226-3830</a>
@@ -241,9 +243,6 @@ footer{background:var(--black);padding:64px 48px 32px;}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80&auto=format&fit=crop" alt="Construction workers on a job site" loading="eager" onerror="this.parentElement.style.background='#111827'">
-  </div>
   <div class="hero-content">
     <div class="hero-badge">City &amp; Rural Service — Same-Day Available</div>
     <h1>From Dirty to Clean.<br><em>In Just One Day.</em></h1>
@@ -258,6 +257,9 @@ footer{background:var(--black);padding:64px 48px 32px;}
       <div class="trust-pill">5-Star Rated</div>
       <div class="trust-pill">Locally Owned</div>
     </div>
+  </div>
+  <div class="hero-logo-banner">
+    <img src="plj-logo.jpg" alt="PLJ Junk Removal — Pickup, Loading, Junk">
   </div>
 </section>
 
@@ -504,8 +506,7 @@ footer{background:var(--black);padding:64px 48px 32px;}
       <div>
         <div class="footer-logo">
           <a href="/" class="nav-logo" aria-label="PLJ Junk Removal home">
-            <div class="nav-logo-mark">PLJ</div>
-            <div class="nav-logo-name" style="color:#fff;">Junk Removal<span>Pickup · Loading · Junk</span></div>
+            <img src="plj-logo.jpg" alt="PLJ Junk Removal & Delivery/Pickup" class="nav-logo-img">
           </a>
         </div>
         <p class="footer-tagline">Fast, affordable junk removal for homes, businesses, and rural properties. Licensed, insured, and locally owned. City or country — we come to you.</p>
