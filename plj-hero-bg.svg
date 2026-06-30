@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMax slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 160 1600 540" preserveAspectRatio="xMidYMax slice">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1">
       <stop offset="0" stop-color="#F5A623"/>
       <stop offset="1" stop-color="#E86A00"/>
     </linearGradient>
-    <symbol id="pljTruck" viewBox="0 0 280 170">
+    <symbol id="pljTruck" viewBox="0 0 280 170" width="280" height="170">
       <rect x="84" y="46" width="182" height="8" fill="#0A0A0A"/>
       <rect x="92" y="46" width="8" height="62" fill="#0A0A0A"/>
       <rect x="122" y="46" width="8" height="62" fill="#0A0A0A"/>
